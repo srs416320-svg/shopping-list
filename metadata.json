@@ -1,0 +1,8 @@
+{
+  "name": "Remix 買い物リスト",
+  "description": "家族でリアルタイム共有・操作できるスマホ向け買い物リストWebアプリ",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

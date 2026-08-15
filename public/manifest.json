@@ -1,0 +1,21 @@
+{
+  "name": "Remix 買い物リスト",
+  "short_name": "買い物リスト",
+  "description": "家族でリアルタイム共有・操作できるスマホ向け買い物リストWebアプリ",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0284c7",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

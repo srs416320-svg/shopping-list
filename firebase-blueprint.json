@@ -1,0 +1,99 @@
+{
+  "entities": {
+    "users": {
+      "title": "User",
+      "description": "User profile and settings",
+      "type": "object",
+      "properties": {
+        "familyGroup": {
+          "type": "string",
+          "description": "Family group code for sharing"
+        }
+      }
+    },
+    "shopping_items": {
+      "title": "Shopping Item",
+      "description": "Grocery shopping list item",
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Item name"
+        },
+        "completed": {
+          "type": "boolean",
+          "description": "Whether the item is checked off"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when created"
+        },
+        "userId": {
+          "type": "string",
+          "description": "User ID of creator"
+        },
+        "userName": {
+          "type": "string",
+          "description": "Display name of creator"
+        },
+        "userPhoto": {
+          "type": "string",
+          "description": "Photo URL of creator"
+        },
+        "category": {
+          "type": "string",
+          "description": "Item category"
+        },
+        "quantity": {
+          "type": "string",
+          "description": "Quantity or note"
+        },
+        "familyGroup": {
+          "type": "string",
+          "description": "Family group code"
+        }
+      },
+      "required": ["text", "completed", "userId", "familyGroup"]
+    },
+    "quick_add_items": {
+      "title": "Quick Add Item",
+      "description": "Preset item for 1-tap quick addition",
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Item name"
+        },
+        "category": {
+          "type": "string",
+          "description": "Item category"
+        },
+        "familyGroup": {
+          "type": "string",
+          "description": "Family group code"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when created"
+        }
+      },
+      "required": ["text", "familyGroup"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "users",
+      "description": "User profile document storing family group preference"
+    },
+    "/shopping_items/{itemId}": {
+      "schema": "shopping_items",
+      "description": "Shared shopping list items across family group"
+    },
+    "/quick_add_items/{itemId}": {
+      "schema": "quick_add_items",
+      "description": "Quick add preset suggestions"
+    }
+  }
+}
